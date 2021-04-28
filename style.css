@@ -29,11 +29,30 @@ body {
   max-width: 100%;
   width: 350px; 
 }
+
+.progress-container::before{
+  content: ''; 
+  background-color: #e0e0e0;
+  position: absolute;
+  top: 50%; 
+  transform: translateY(-50%);
+  left: 0; 
+  height: 4px;
+  width: 100%;  
+  z-index: -1;
+}
+/* style the progress bar - z index will move it in front of the numbers */
 .progress{
   background-color: #3498db;
   position: absolute;
   top: 50%; 
+  transform: translateY(-50%);
   left: 0; 
   height: 4px;
-  width: 50%;  
+  width: 0%;  
+  z-index: -1;
+  transition: .4s ease; 
+
 }
+
+/* Styles of the circles */
